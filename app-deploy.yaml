@@ -1,34 +1,39 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: junit-demo-service
+  name: my-junit
+  labels:
+    app: my-junit
+
 spec:
-  selector:
-    app: junit-demo-app
+  type: NodePort
   ports:
-    - protocol: "TCP"
-      port: 8080
-      targetPort: 8080
-  type: LoadBalancer
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: my-junit
+
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: junit-demo-app
+  name: my-junit
+  labels:
+    app: my-junit
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: junit-demo-app
-  replicas: 1
+      app: my-junit
   template:
     metadata:
       labels:
-        app: junit-demo-app
+        app: my-junit
     spec:
       containers:
-        - name: junit-demo-app
-          image: sreelk589/junit:latest
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 8080
-         
+      - name: springboot
+        image: sreelk589/junit:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
