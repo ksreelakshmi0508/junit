@@ -7,7 +7,7 @@ public class TestControllerSample {
 	
 	@RequestMapping("/hello")
 	public String test() {
-		return "Spring boot application using spring initializer";
+		return "Spring boot application";
 	}
 
 }
