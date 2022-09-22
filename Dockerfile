@@ -1,4 +1,5 @@
-FROM eclipse-temurin:11
-RUN mkdir /opt/app
-COPY japp.jar /opt/app
-CMD ["java", "-jar", "/opt/app/japp.jar"]
+FROM openjdk:11-slim
+EXPOSE 8080
+WORKDIR /app
+COPY target/*.jar junit.jar
+ENTRYPOINT ["java","-jar","/junit.jar"]
