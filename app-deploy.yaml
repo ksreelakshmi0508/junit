@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: junit-app
+  labels:
+    app: junit-app
+
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: junit-app
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: junit-app
+  labels:
+    app: junit-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: junit-app
+  template:
+    metadata:
+      labels:
+        app: junit-app
+    spec:
+      containers:
+      - name: springboot
+        image: sreelk589/junit:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
