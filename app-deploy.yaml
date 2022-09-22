@@ -29,9 +29,9 @@ spec:
 			labels:
 				app: junit-demo-test
     spec:
-		containers:
-		- name: springboot
-		  image: sreelk589/junit:latest
-      imagePullPolicy: Always
-      ports:
-        - containerPort: 8080
+	containers:
+	- name: springboot
+	  image: sreelk589/junit:latest
+      	  imagePullPolicy: Always
+          ports:
+          	- containerPort: 8080
