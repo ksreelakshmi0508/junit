@@ -32,7 +32,7 @@ spec:
         app: junit-app
     spec:
       containers:
-      - name: springboot
+      - name: springbootapp
         image: sreelk589/junit:latest
         imagePullPolicy: Always
         ports:
