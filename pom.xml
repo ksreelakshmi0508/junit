@@ -22,6 +22,7 @@
         	<sonar.host.url>http://44.197.200.105:9000/</sonar.host.url>
         	<sonar.login>admin</sonar.login>
         	<sonar.password>admin</sonar.password>
+		<sonar.exclusions>src/test/java/**/*.java</sonar.exclusions>
         	<!--<sonar.projectBaseDir>/home/ubuntu/sonar</sonar.projectBaseDir>-->
 	</properties>
 	<dependencies>
