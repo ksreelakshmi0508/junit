@@ -22,9 +22,9 @@
         	<sonar.host.url>http://44.197.200.105:9000/</sonar.host.url>
         	<sonar.login>admin</sonar.login>
         	<sonar.password>admin</sonar.password>
-		<sonar.exclusions>src/test/java/**/*.java</sonar.exclusions>
-        	<!--<sonar.projectBaseDir>/home/ubuntu/sonar</sonar.projectBaseDir>-->
-		<!--<sonar.java.binaries>target</sonar.java.binaries>-->
+		<!--<sonar.exclusions>src/test/java/**/*.java</sonar.exclusions>-->
+        	<sonar.projectBaseDir>/home/ubuntu/sonar</sonar.projectBaseDir>
+		<sonar.java.binaries>target</sonar.java.binaries>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -37,11 +37,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>-->
+		</dependency>
 		
 		<dependency>
             		<groupId>org.springframework.boot</groupId>
