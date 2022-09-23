@@ -17,7 +17,7 @@
         	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         	<!--<maven.compiler.source>11</maven.compiler.source>
         	<maven.compiler.target>11</maven.compiler.target>-->
-        	<java.version>11</java.version>
+        	<java.version>8</java.version>
         	<project.test.result.directory>${project.build.directory}/test-results</project.test.result.directory>
         	<sonar.host.url>http://44.197.200.105:9000/</sonar.host.url>
         	<sonar.login>admin</sonar.login>
